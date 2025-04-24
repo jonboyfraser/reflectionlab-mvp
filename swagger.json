@@ -1,0 +1,91 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ReflectionLab API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/v1/artifacts": {
+      "get": {
+        "summary": "List artifacts",
+        "tags": [
+          "Artifacts"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of artifacts"
+          }
+        }
+      }
+    },
+    "/api/v1/entries": {
+      "get": {
+        "summary": "List entries",
+        "tags": [
+          "Entries"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of entries"
+          }
+        }
+      }
+    },
+    "/api/v1/goals": {
+      "get": {
+        "summary": "List goals",
+        "tags": [
+          "Goals"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of goals"
+          }
+        }
+      }
+    },
+    "/api/v1/journals": {
+      "get": {
+        "summary": "List journals",
+        "tags": [
+          "Journals"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of journals"
+          }
+        }
+      }
+    },
+    "/api/v1/seeds": {
+      "get": {
+        "summary": "List seeds",
+        "tags": [
+          "Seeds"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of seeds"
+          }
+        }
+      }
+    },
+    "/api/v1/users": {
+      "get": {
+        "summary": "List users",
+        "tags": [
+          "Users"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of users"
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": [
+    "Artifacts"
+  ]
+}
