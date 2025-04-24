@@ -8,3 +8,5 @@ mkdir
 plugins
 rules
 *.log
+dist/
+.vscode/

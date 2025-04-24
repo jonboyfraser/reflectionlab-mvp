@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "reflectionlab-mvp",
   "version": "1.0.0",
   "description": "ReflectionLab MVP - journalling to AI content generator",
@@ -7,8 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "dev": "node infra/dev-server/index.js",
+    "api": "nodemon infra/api/src/index.js",
     "lint": "eslint . --ext .js,.jsx",
-    "postinstall": "node infra/dev-server/generate-cert.js"
+    "postinstall": "node infra/dev-server/generate-cert.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "keywords": [],
   "author": "",
@@ -19,9 +22,17 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "express": "^4.18.2",
+    "express": "^4.21.2",
     "husky": "^8.0.3",
-    "prettier": "^3.2.4",
+    "prettier": "^3.5.3",
     "selfsigned": "^2.4.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.15.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^3.24.3"
   }
 }

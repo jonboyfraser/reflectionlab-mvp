@@ -84,7 +84,9 @@ erDiagram
 ## Entity Descriptions
 
 ### Users
+
 The core user account entity that represents registered users in the system.
+
 - `id`: Unique identifier for the user
 - `email`: User's email address (unique)
 - `name`: User's display name
@@ -93,7 +95,9 @@ The core user account entity that represents registered users in the system.
 - `is_active`: Whether the account is active
 
 ### Journals
+
 Collections of related entries created by users.
+
 - `id`: Unique identifier for the journal
 - `user_id`: Reference to the owner
 - `title`: Journal title
@@ -102,7 +106,9 @@ Collections of related entries created by users.
 - `updated_at`: Timestamp of last journal update
 
 ### Entries
+
 Individual journal entries containing user reflections.
+
 - `id`: Unique identifier for the entry
 - `journal_id`: Reference to the parent journal
 - `content`: The entry's text content
@@ -113,7 +119,9 @@ Individual journal entries containing user reflections.
 - `updated_at`: Timestamp of last entry update
 
 ### Goals
+
 User-defined goals and objectives.
+
 - `id`: Unique identifier for the goal
 - `user_id`: Reference to the goal owner
 - `title`: Goal title
@@ -124,7 +132,9 @@ User-defined goals and objectives.
 - `updated_at`: Timestamp of last goal update
 
 ### AI Artifacts
+
 AI-generated insights and analysis from entries.
+
 - `id`: Unique identifier for the artifact
 - `entry_id`: Reference to the source entry
 - `type`: Type of artifact (e.g., "insight", "summary", "recommendation")
@@ -133,7 +143,9 @@ AI-generated insights and analysis from entries.
 - `created_at`: Timestamp of artifact creation
 
 ### Subscriptions
+
 User subscription and billing information.
+
 - `id`: Unique identifier for the subscription
 - `user_id`: Reference to the subscriber
 - `plan_type`: Subscription plan type
@@ -144,7 +156,9 @@ User subscription and billing information.
 - `updated_at`: Timestamp of last subscription update
 
 ### Followup Seeds
+
 AI-generated prompts for future reflection entries.
+
 - `id`: Unique identifier for the seed
 - `user_id`: Reference to the target user
 - `prompt_type`: Type of prompt
@@ -152,4 +166,4 @@ AI-generated prompts for future reflection entries.
 - `is_used`: Whether the prompt has been used
 - `target_date`: Intended date for the prompt
 - `created_at`: Timestamp of seed creation
-- `updated_at`: Timestamp of last seed update 
+- `updated_at`: Timestamp of last seed update
