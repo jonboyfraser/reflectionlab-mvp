@@ -4,4 +4,6 @@ coverage/
 .git/
 *.log
 *.lock
-.DS_Store 
+.DS_Store
+docs/**
+infra/sql/** 
