@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "node infra/dev-server/index.js",
+    "lint": "eslint . --ext .js,.jsx",
+    "postinstall": "node infra/dev-server/generate-cert.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +16,13 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
-    "husky": "^9.1.7"
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "express": "^5.1.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "selfsigned": "^2.4.1"
   }
 }
