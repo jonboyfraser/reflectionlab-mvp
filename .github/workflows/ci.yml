@@ -6,23 +6,16 @@ on:
   pull_request:
 
 jobs:
-  lint-test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: npm ci
-      - run: npm run format:fix
-      - run: npm run lint
-
-  deploy-staging:
-    if: github.ref == 'refs/heads/master'
-    needs: lint-test
-    runs-on: ubuntu-latest
-    environment: staging
-    steps:
-      - uses: actions/checkout@v4
-      - name: Placeholder deploy
-        run: echo "Deploy to Xano staging workspace will go here"
+      - name: Install dependencies
+        run: npm ci
+      - name: Format code
+        run: npm run format:fix
+      - name: Lint code
+        run: npm run lint
