@@ -1,0 +1,3 @@
+# Ignore generated or non-JS assets
+docs/**
+infra/sql/** 
